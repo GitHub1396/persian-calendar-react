@@ -1,0 +1,223 @@
+.persian_calendar_container {
+  max-width: 400px;
+  padding: 0;
+  background-color: #fff;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
+.persian_calendar_seasonal_date_selection_container {
+  width: 100%;
+  height: 40PX;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+}
+
+.persian_calendar_date_selection {
+  width: calc(100% / 3)
+}
+
+/* .persian_calendar_seasonal_image {
+  display: block;
+  max-height: 100%;
+  width: 100%;
+  margin: 0 auto;
+} */
+
+.persian_calendar_date_container {
+  height: 285px;
+  padding: 5px 40px 0 40px;
+}
+
+.persian_calendar_date_right_side {
+  width: 100%;
+  /* float: right; */
+  padding-top: 85%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.persian_calendar_date_left_side {
+  width: 45%;
+  float: left;
+  padding-top: 55%;
+  position: relative;
+}
+
+.persian_calendar_date_now {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #019DE0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px 0 5px 0;
+}
+
+.persian_calendar_day {
+  display: block;
+  width: 100%;
+  font-size: 8rem;
+  text-align: center;
+}
+
+.persian_calendar_month {
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: center
+}
+
+.persian_calendar_year {
+  display: block;
+  width: 100%;
+  font-size: 2rem;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.persian_calendar_date_days {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  padding: 2.5px;
+}
+
+.persian_calendar_day_number_container {
+  position: relative;
+  border-radius: 0px;
+  width: calc(14.285% - 5px);
+  padding-top: calc(14.285% - 5px);
+  background-color: #019DE0;
+  display: block;
+  margin: 2.5px 2.5px 2.5px 2.5px;
+  cursor: pointer;
+}
+
+.persian_calendar_day_number {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.persian_calendar_day_names_container {
+  padding: 2.5px;
+  float: right;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  position: absolute;
+  height: 20px;
+  top: 0;
+  left: 0;
+}
+
+.persian_calendar_day_name {
+  display: block;
+  width: 14.285%;
+}
+
+.persian_calendar_dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.persian_calendar_dropdown>input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.persian_calendar_dropdown>label, .persian_calendar_dropdown>a[role="button"] {
+  display: inline-block;
+  padding: 6px 15px;
+  color: #333;
+  line-height: 1.5em;
+  text-decoration: none;
+  border: 1px solid #8c8c8c;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.persian_calendar_dropdown>label:hover, .persian_calendar_dropdown>a[role="button"]:hover, .persian_calendar_dropdown>a[role="button"]:focus {
+  border-color: #333;
+}
+
+.persian_calendar_dropdown>label:after, .persian_calendar_dropdown>a[role="button"]:after {
+  content: "\f0d7";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.persian_calendar_dropdown>ul {
+  position: absolute;
+  z-index: 999;
+  display: block;
+  left: -100vw;
+  top: calc(1.5em + 14px);
+  border: 1px solid #8c8c8c;
+  background: #fff;
+  padding: 6px 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .15);
+  -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, .15);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .15);
+}
+
+.persian_calendar_dropdown>ul a {
+  display: block;
+  padding: 6px 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.persian_calendar_dropdown>ul a:hover, .persian_calendar_dropdown>ul a:focus {
+  background: #ececec;
+}
+
+.persian_calendar_dropdown>input[type="checkbox"]:checked~ul, .persian_calendar_dropdown>ul:target {
+  left: 0;
+}
+
+.persian_calendar_dropdown>[type="checkbox"]:checked+label:after, .persian_calendar_dropdown>ul:target~a:after {
+  content: "\f0d8";
+}
+
+.persian_calendar_dropdown a.close {
+  display: none;
+}
+
+.persian_calendar_dropdown>ul:target~a.close {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  text-indent: -100vw;
+  z-index: 1000;
+}

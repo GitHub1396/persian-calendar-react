@@ -1,0 +1,20 @@
+.persian_Days {
+  width: 100%;
+  padding: 10px;
+  padding-top: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  direction: rtl;
+  margin: 0 auto;
+}
+
+.persian_Day {
+  width: 14.3%;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: #ccc;
+  padding: 10px 5px 10px 5px;
+  text-align: center;
+}
